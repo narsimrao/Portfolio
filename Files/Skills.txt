@@ -1,0 +1,11 @@
+Dot-Net,60;
+Python,50;
+Agile,80;
+HTML,60;
+MS-Office,70;
+CSS,60;
+Javascript,60;
+Java,40;
+XSLT,70;
+SSRS,40;
+SQL,60;
