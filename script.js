@@ -1,4 +1,8 @@
 $(document).ready(function(){
+    var skills = "";
+    var aboutme = "";
+    
+
     $(window).scroll(function(){
         // sticky navbar on scroll script
         if(this.scrollY > 20){
@@ -13,6 +17,34 @@ $(document).ready(function(){
         }else{
             $('.scroll-up-btn').removeClass("show");
         }
+    });
+    $(window).load("https://raw.githubusercontent.com/narsimrao/narsimrao.github.io/main/Files/Skills.txt", function(responseTxt, statusTxt, xhr){
+      if(statusTxt == "success")
+      var individualskills = responseTxt.split(";");
+      var i;
+      for (i = 0; i < individualskills.length-1; i++)
+      {
+        var skill = individualskills[i].split(",");
+        if(i % 2 == 0)
+        {
+            document.getElementsByClassName("skilldataleft")[0].innerHTML += 
+            '<div class="bars"><div class="info"><span>' + skill[0] + '</span><span>' + skill[1] + '%</span></div><div class="line ' + skill[0] + '"></div></div>';
+        }
+        else
+        {
+            document.getElementsByClassName("skilldataright")[0].innerHTML += 
+            '<div class="bars"><div class="info"><span>' + skill[0] + '</span><span>' + skill[1] + '%</span></div><div class="line ' + skill[0] + '"></div></div>';
+        }
+        
+      }      
+      if(statusTxt == "error")
+        alert("Error: " + xhr.status + ": " + xhr.statusText);
+    });
+    $(window).load("https://raw.githubusercontent.com/narsimrao/narsimrao.github.io/main/Files/AboutMe.txt", function(responseTxt, statusTxt, xhr){
+      if(statusTxt == "success")
+      document.getElementsByClassName("aboutcontent")[0].textContent = responseTxt;
+      if(statusTxt == "error")
+        alert("Error: " + xhr.status + ": " + xhr.statusText);
     });
 
     // slide-up script
@@ -63,5 +95,5 @@ $(document).ready(function(){
                 nav: false
             }
         }
-    });
+    });  
 });

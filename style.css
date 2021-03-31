@@ -223,12 +223,15 @@ section .title::after{
     border-radius: 6px;
 }
 .about .about-content .right{
-    width: 55%;
+    width: 100%;
 }
 .about .about-content .right .text{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
+}
+.resume{
+    text-align: center;
 }
 .about .about-content .right .text span{
     color:white;
@@ -312,29 +315,32 @@ section .title::after{
 .skills .skills-content .column{
     width: calc(50% - 30px);
 }
-.skills .skills-content .left .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
+.skills .skills-content .left .bars{
+    margin-bottom: 15px;
 }
-.skills .skills-content .left p{
-    text-align: justify;
+.skills .skills-content .left .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
 }
-.skills .skills-content .left a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 18px;
+.skills .skills-content .left span{
     font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
+    font-size: 18px;
 }
-.skills .skills-content .left a:hover{
-    color: crimson;
-    background: none;
+.skills .skills-content .left .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.skills .skills-content .left .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
 }
 .skills .skills-content .right .bars{
     margin-bottom: 15px;
@@ -363,37 +369,37 @@ section .title::after{
     top: 0;
     background: crimson;
 }
-.skills-content .right .html::before{
+.skills-content .right .HTML::before{
     width: 60%;
 }
-.skills-content .right .css::before{
+.skills-content .right .CSS::before{
     width: 60%;
 }
-.skills-content .right .js::before{
+.skills-content .left .Javascript::before{
     width: 60%;
 }
-.skills-content .right .net::before{
+.skills-content .left .Dot-Net::before{
     width: 60%;
 }
-.skills-content .right .python::before{
+.skills-content .right .Python::before{
     width: 50%;
 }
-.skills-content .right .agile::before{
+.skills-content .left .Agile::before{
     width: 80%;
 }
-.skills-content .right .msoffice::before{
+.skills-content .left .MS-Office::before{
     width: 70%;
 }
-.skills-content .right .java::before{
+.skills-content .right .Java::before{
     width: 40%;
 }
-.skills-content .right .xslt::before{
+.skills-content .left .XSLT::before{
     width: 70%;
 }
-.skills-content .right .ssrs::before{
+.skills-content .right .SSRS::before{
     width: 40%;
 }
-.skills-content .right .sql::before{
+.skills-content .left .SQL::before{
     width: 60%;
 }
 
