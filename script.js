@@ -40,7 +40,7 @@ $(document).ready(function(){
       if(statusTxt == "error")
         alert("Error: " + xhr.status + ": " + xhr.statusText);
     });
-    $(window).load("https://raw.githubusercontent.com/narsimrao/narsimrao.github.io/main/Files/AboutMe.txt", function(responseTxt, statusTxt, xhr){
+    $(window).load("https://raw.githubusercontent.com/narsimrao/test/main/AboutMe.txt", function(responseTxt, statusTxt, xhr){
       if(statusTxt == "success")
       document.getElementsByClassName("aboutcontent")[0].textContent = responseTxt;
       if(statusTxt == "error")
