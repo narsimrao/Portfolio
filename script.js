@@ -42,8 +42,6 @@ $(document).ready(function(){
         {
             alert("Error: " + xhr.status + ": " + xhr.statusText);
         }
-        $.get   
-
     //   if(statusTxt == "success")
     //     var individualskills = responseTxt.split(";");
     //     var i;
@@ -64,6 +62,14 @@ $(document).ready(function(){
     //     }      
     //   if(statusTxt == "error")
     //     alert("Error: " + xhr.status + ": " + xhr.statusText);
+    });
+
+    $(window).load("https://raw.githubusercontent.com/narsimrao/narsimrao.github.io/main/Files/New Skills.txt", function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+        {
+            var individualskills = responseTxt.split(",");
+            console.log(individualskills)
+        }
     });
     $(window).load("https://raw.githubusercontent.com/narsimrao/narsimrao.github.io/main/Files/AboutMe.txt", function(responseTxt, statusTxt, xhr){
       if(statusTxt == "success")
